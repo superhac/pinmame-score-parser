@@ -1882,6 +1882,22 @@
       }
     ]
   },
+  "comet_l5": {
+    "decoder": "mixed_leaderboard",
+    "one_based": true,
+    "scoretype": "Leaderboard",
+    "sections": [
+      {
+        "title": "HIGHEST SCORES",
+        "entries": [
+          {"rank": 1, "score_decoder": "bcd", "score_offsets": [1845, 1846, 1847, 1848]},
+          {"rank": 2, "score_decoder": "bcd", "score_offsets": [1849, 1850, 1851, 1852]},
+          {"rank": 3, "score_decoder": "bcd", "score_offsets": [1853, 1854, 1855, 1856]},
+          {"rank": 4, "score_decoder": "bcd", "score_offsets": [1857, 1858, 1859, 1860]}
+        ]
+      }
+    ]
+  },
   "corv_21": {
     "decoder": "mixed_leaderboard",
     "one_based": true,

@@ -830,10 +830,12 @@ def decode_mixed_leaderboard(
                 continue
 
             for entry in section["entries"]:
-                initials = decode_initials(
-                    read_offsets(f, entry["name_offsets"], one_based=one_based),
-                    entry.get("name_decoder"),
-                )
+                initials = ""
+                if "name_offsets" in entry:
+                    initials = decode_initials(
+                        read_offsets(f, entry["name_offsets"], one_based=one_based),
+                        entry.get("name_decoder"),
+                    )
                 if "score_offsets" not in entry and "entry_decoder" not in entry:
                     decoded_entry = ParsedEntry(
                         section=section["title"],
@@ -1211,6 +1213,7 @@ if __name__ == "__main__":
         "wwfr_106":"/home/superhac/tables/WWF Royal Rumble (Data East 1994)/pinmame/nvram/wwfr_106.nv",
         "dvlsdre":"/home/superhac/tables/Devils Dare (Gottlieb 1982)/pinmame/nvram/dvlsdre.nv",
         "dollyptb": "/home/superhac/tables/Dolly Parton (Bally 1979)/pinmame/nvram/dollyptb.nv",
+        "comet_l5":"/home/superhac/tables/Miami Vice (Original 2020)/pinmame/nvram/comet_l5.nv",
     }
 
     for rom_name, filename in rom_files.items():
