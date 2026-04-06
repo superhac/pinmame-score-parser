@@ -1210,6 +1210,7 @@ if __name__ == "__main__":
         "ww_lh6": "/home/superhac/tables/White Water (Williams 1993)/pinmame/nvram/ww_lh6.nv",
         "wwfr_106":"/home/superhac/tables/WWF Royal Rumble (Data East 1994)/pinmame/nvram/wwfr_106.nv",
         "dvlsdre":"/home/superhac/tables/Devils Dare (Gottlieb 1982)/pinmame/nvram/dvlsdre.nv",
+        "dollyptb": "/home/superhac/tables/Dolly Parton (Bally 1979)/pinmame/nvram/dollyptb.nv",
     }
 
     for rom_name, filename in rom_files.items():
