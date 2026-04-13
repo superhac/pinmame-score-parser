@@ -53,6 +53,7 @@ rom_aliases = {
     "twenty4_150": "twenty4_144",
     "ww_lh6": "ww_lh5",
     "wwfr_106":"wwfr_103",
+    "stk_sprs" : "evelknie",
 
 }
 
@@ -1214,6 +1215,8 @@ if __name__ == "__main__":
         "dvlsdre":"/home/superhac/tables/Devils Dare (Gottlieb 1982)/pinmame/nvram/dvlsdre.nv",
         "dollyptb": "/home/superhac/tables/Dolly Parton (Bally 1979)/pinmame/nvram/dollyptb.nv",
         "comet_l5":"/home/superhac/tables/Miami Vice (Original 2020)/pinmame/nvram/comet_l5.nv",
+        "jm_12r" :"/home/superhac/tables/Johnny Mnemonic (Williams 1995)/pinmame/nvram/jm_12r.nv",
+        "stk_sprs" : "/home/superhac/tables/Strikes and Spares (Bally 1978)/pinmame/nvram/stk_sprs.nv",
     }
 
     for rom_name, filename in rom_files.items():
