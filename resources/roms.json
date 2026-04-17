@@ -8022,6 +8022,48 @@
       }
     ]
   },
+  "wwfr_106": {
+    "decoder": "mixed_leaderboard",
+    "scoretype": "Leaderboard",
+    "sections": [
+      {
+        "title": "KING O' RING",
+        "entries": [
+          {"name_offsets": [5978, 5979, 5980], "rank": "#1", "score_decoder": "bcd", "score_offsets": [5940, 5916, 5917, 5918, 5919]}
+        ]
+      },
+      {
+        "title": "WORLD CHAMP",
+        "entries": [
+          {"name_offsets": [5981, 5982, 5983], "rank": "#2", "score_decoder": "bcd", "score_offsets": [5941, 5920, 5921, 5922, 5923]}
+        ]
+      },
+      {
+        "title": "TOP TITAN",
+        "entries": [
+          {"name_offsets": [5984, 5985, 5986], "rank": "#3", "score_decoder": "bcd", "score_offsets": [5942, 5924, 5925, 5926, 5927]}
+        ]
+      },
+      {
+        "title": "SURVIVOR",
+        "entries": [
+          {"name_offsets": [5987, 5988, 5989], "rank": "#4", "score_decoder": "bcd", "score_offsets": [5943, 5928, 5929, 5930, 5931]}
+        ]
+      },
+      {
+        "title": "MANIAC",
+        "entries": [
+          {"name_offsets": [5990, 5991, 5992], "rank": "#5", "score_decoder": "bcd", "score_offsets": [5944, 5932, 5933, 5934, 5935]}
+        ]
+      },
+      {
+        "title": "DINK",
+        "entries": [
+          {"name_offsets": [5993, 5994, 5995], "rank": "#6", "score_decoder": "bcd", "score_offsets": [5945, 5936, 5937, 5938, 5939]}
+        ]
+      }
+    ]
+  },
   "xfiles": {
     "decoder": "mixed_leaderboard",
     "scoretype": "Leaderboard",

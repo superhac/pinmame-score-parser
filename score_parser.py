@@ -60,7 +60,6 @@ rom_aliases = {
     "ss_15":"ss_14",
     "twenty4_150": "twenty4_144",
     "ww_lh6": "ww_lh5",
-    "wwfr_106":"wwfr_103",
      "stk_sprs" : "evelknie",
 
 }
@@ -196,10 +195,10 @@ special_text_score_files = {
     },
 }
 
-def get_roms_path() -> Path:
+def get_roms_candidate_paths() -> list[Path]:
     candidate_paths: list[Path] = [
-        USER_ROMS_PATH,
         Path(__file__).with_name("resources") / "roms.json",
+        USER_ROMS_PATH,
     ]
 
     meipass = getattr(sys, "_MEIPASS", None)
@@ -217,19 +216,33 @@ def get_roms_path() -> Path:
 
     candidates = list(dict.fromkeys(candidate_paths))
 
-    for path in candidates:
+    return candidates
+
+
+def get_roms_path() -> Path:
+    for path in get_roms_candidate_paths():
         if path.exists():
             return path
 
     raise FileNotFoundError(
         "Could not find roms.json. Checked: "
-        + ", ".join(str(path) for path in candidates)
+        + ", ".join(str(path) for path in get_roms_candidate_paths())
     )
 
 def load_roms() -> dict:
-    roms_path = get_roms_path()
-    with roms_path.open("r", encoding="utf-8") as f:
-        return json.load(f)
+    merged_roms: dict = {}
+    existing_paths = [path for path in get_roms_candidate_paths() if path.exists()]
+    if not existing_paths:
+        raise FileNotFoundError(
+            "Could not find roms.json. Checked: "
+            + ", ".join(str(path) for path in get_roms_candidate_paths())
+        )
+
+    for roms_path in existing_paths:
+        with roms_path.open("r", encoding="utf-8") as f:
+            merged_roms.update(json.load(f))
+
+    return merged_roms
 
 
 roms = load_roms()
