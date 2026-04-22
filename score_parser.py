@@ -45,7 +45,6 @@ rom_aliases = {
     "fg_1200af":"fg_1200al",
     "eightbll": "evelknie",
     "frpwr_b7": "frpwr_b6",
-    "hook_501":"hook_408",
     "im_185ve": "im_185",
     "im_183ve": "im_185",
     "jd_l1": "jd_l7",
@@ -1655,6 +1654,7 @@ if __name__ == "__main__":
         "AliceInWonderland": "/home/superhac/tables/Alice in Wonderland (Gottlieb 1948)",
         "wwfr_106": "/home/superhac/tables/WWF Royal Rumble (Data East 1994)",
         "simp": "/home/superhac/tables/The Simpsons (Data East 1990)",
+        "hook_501":"/home/superhac/tables/Hook (Data East 1992)/pinmame/nvram/hook_501.nv",
     }
 
     for rom_name, table_dir in rom_files.items():
