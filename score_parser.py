@@ -1482,8 +1482,28 @@ DECODERS = {
     "mixed_leaderboard": decode_mixed_leaderboard,
 }
 
+def _lookup_case_insensitive(mapping: dict, key: str) -> str | None:
+    if key in mapping:
+        return key
+
+    lowered_key = key.lower()
+    for existing_key in mapping:
+        if existing_key.lower() == lowered_key:
+            return existing_key
+
+    return None
+
+
 def resolve_rom_name(rom_name: str) -> str:
-    return rom_aliases.get(rom_name, rom_name)
+    alias_key = _lookup_case_insensitive(rom_aliases, rom_name)
+    if alias_key is not None:
+        return rom_aliases[alias_key]
+
+    rom_key = _lookup_case_insensitive(roms, rom_name)
+    if rom_key is not None:
+        return rom_key
+
+    return rom_name
 
 def format_entry(entry: ParsedEntry) -> list[str]:
     rank_text = f"{entry.rank} " if entry.rank is not None else ""
@@ -1675,3 +1695,4 @@ if __name__ == "__main__":
         print()
         print(json.dumps(result_to_jsonable(rom_name, result, resolved_path), indent=2))
         print()
+        
