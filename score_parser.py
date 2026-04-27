@@ -42,6 +42,8 @@ rom_aliases = {
     "cftbl_l4": "cftbl_l3",
     "cp_16": "cp_15",
     "eatpm_l4": "eatpm_l1",
+    "eballd14": "eballdlx",
+    "eballdld": "eballdlx",
     "fg_1200af":"fg_1200al",
     "eightbll": "evelknie",
     "frpwr_b7": "frpwr_b6",
@@ -1675,6 +1677,7 @@ if __name__ == "__main__":
         "wwfr_106": "/home/superhac/tables/WWF Royal Rumble (Data East 1994)",
         "simp": "/home/superhac/tables/The Simpsons (Data East 1990)",
         "hook_501":"/home/superhac/tables/Hook (Data East 1992)/pinmame/nvram/hook_501.nv",
+        "eballdlx":"/home/superhac/tables/Eight Ball Deluxe (Bally 1981)/pinmame/nvram/eballdlx.nv",
     }
 
     for rom_name, table_dir in rom_files.items():

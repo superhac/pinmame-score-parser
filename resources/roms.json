@@ -2373,6 +2373,13 @@
     "scoretype": "HIGHEST SCORE",
     "zero_byte": 240
   },
+  "eballdlx": {
+    "decoder": "single_high_nibble_score",
+    "offsets": [166, 167, 168, 169, 170, 171, 172],
+    "one_based": false,
+    "scoretype": "High Score",
+    "zero_byte": 255
+  },
   "esha_la3": {
     "decoder": "leaderboard_bcd",
     "entries": [
