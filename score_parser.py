@@ -39,6 +39,8 @@ rom_aliases = {
     "bcats_l5": "bcats_l2",
     "afm_113b": "afm_113",
     "btmn_106": "btmn_101",
+    "bttf_a28": "bttf_a27",
+    "bttf_g27": "bttf_a27",
     "cftbl_l4": "cftbl_l3",
     "cp_16": "cp_15",
     "eatpm_l4": "eatpm_l1",
@@ -63,6 +65,8 @@ rom_aliases = {
     "ww_lh6": "ww_lh5",
     "stk_sprs" : "evelknie",
     "simp" :"simp_a27",
+    "mtl_180hc": "mtl_180h",
+    "shaqatt2": "shaqattq",
 
 }
 
@@ -129,6 +133,10 @@ special_text_score_files = {
     },
     "ElToro": {
         "filename": "ElToro.txt",
+        "parser": "score_key_value",
+    },
+    "Expressway": {
+        "filename": "Expressway.txt",
         "parser": "score_key_value",
     },
     "jacksopen": {
@@ -1678,6 +1686,8 @@ if __name__ == "__main__":
         "simp": "/home/superhac/tables/The Simpsons (Data East 1990)",
         "hook_501":"/home/superhac/tables/Hook (Data East 1992)/pinmame/nvram/hook_501.nv",
         "eballdlx":"/home/superhac/tables/Eight Ball Deluxe (Bally 1981)/pinmame/nvram/eballdlx.nv",
+        "bttf_a27": "/home/superhac/tables/Back To The Future (Data East 1990)/pinmame/nvram/bttf_a27.nv",
+        "mtl_180hc": "/home/superhac/tables/Metallica Premium Monsters (Stern 2013)/pinmame/nvram/mtl_180h.nv",
     }
 
     for rom_name, table_dir in rom_files.items():
